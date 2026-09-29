@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRAVELX | Destinations</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f8fa;
+    color:#172026;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#0f172a;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 7%;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#5eead4;
+}
+
+/* HEADER */
+
+.page-header{
+    text-align:center;
+
+    padding:75px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f766e,
+            #164e63
+        );
+
+    color:white;
+}
+
+.page-header h1{
+    font-size:50px;
+}
+
+.page-header p{
+    margin-top:15px;
+    color:#d8eeee;
+    font-size:17px;
+}
+
+/* DESTINATION SECTION */
+
+.destinations{
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.15);
+}
+
+/* IMAGE */
+
+.card-image{
+    height:210px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #99f6e4,
+            #0f766e
+        );
+}
+
+.card:nth-child(2) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #bfdbfe,
+            #2563eb
+        );
+}
+
+.card:nth-child(3) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #fed7aa,
+            #ea580c
+        );
+}
+
+.card:nth-child(4) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #bbf7d0,
+            #15803d
+        );
+}
+
+.card:nth-child(5) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #ddd6fe,
+            #6d28d9
+        );
+}
+
+.card:nth-child(6) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #fde68a,
+            #b45309
+        );
+}
+
+/* CONTENT */
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h2{
+    font-size:24px;
+}
+
+.card-content p{
+    margin-top:12px;
+
+    color:#687880;
+
+    line-height:1.6;
+}
+
+.explore{
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:10px 18px;
+
+    border-radius:20px;
+
+    background:#0f9f8f;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.explore:hover{
+    background:#08786c;
+
+    transform:translateY(-2px);
+}
+
+/* BACK BUTTON */
+
+.back{
+    text-align:center;
+
+    padding-bottom:60px;
+}
+
+.back a{
+    color:#0f766e;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    padding:25px;
+
+    background:#0f172a;
+
+    color:#aebcc2;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .destinations{
+        grid-template-columns:1fr;
+    }
+
+    .page-header h1{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        TRAVELX
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="destinations.html">
+            Destinations
+        </a>
+
+        <a href="packages.html">
+            Packages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="page-header">
+
+    <h1>
+        Explore Destinations
+    </h1>
+
+    <p>
+        Discover beautiful places and unforgettable
+        experiences across India.
+    </p>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section class="destinations">
+
+
+    <!-- GOA -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🏖️
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Goa
+            </h2>
+
+            <p>
+                Famous for beautiful beaches,
+                sunsets, coastal culture and
+                exciting experiences.
+            </p>
+
+            <a
+                href="goa.html"
+                class="explore"
+            >
+                Explore Goa →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MANALI -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🏔️
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Manali
+            </h2>
+
+            <p>
+                A beautiful Himalayan destination
+                surrounded by mountains, valleys
+                and peaceful landscapes.
+            </p>
+
+            <a
+                href="manali.html"
+                class="explore"
+            >
+                Explore Manali →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAIPUR -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🏰
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Jaipur
+            </h2>
+
+            <p>
+                Explore royal palaces, historic
+                forts and the colourful heritage
+                of Rajasthan.
+            </p>
+
+            <a
+                href="jaipur.html"
+                class="explore"
+            >
+                Explore Jaipur →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- KERALA -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🌴
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Kerala
+            </h2>
+
+            <p>
+                Discover peaceful backwaters,
+                greenery, beaches and the natural
+                beauty of Kerala.
+            </p>
+
+            <a
+                href="kerala.html"
+                class="explore"
+            >
+                Explore Kerala →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- KASHMIR -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🏞️
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Kashmir
+            </h2>
+
+            <p>
+                Experience beautiful valleys,
+                lakes, mountains and scenic
+                landscapes.
+            </p>
+
+            <a
+                href="kashmir.html"
+                class="explore"
+            >
+                Explore Kashmir →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MUMBAI -->
+
+    <div class="card">
+
+        <div class="card-image">
+            🌆
+        </div>
+
+        <div class="card-content">
+
+            <h2>
+                Mumbai
+            </h2>
+
+            <p>
+                Explore India's energetic city,
+                famous landmarks, beaches and
+                urban culture.
+            </p>
+
+            <a
+                href="mumbai.html"
+                class="explore"
+            >
+                Explore Mumbai →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+    <a href="index.html">
+        ← Back to Home
+    </a>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 TRAVELX — Explore • Travel • Discover
+
+</footer>
+
+</body>
+</html>
