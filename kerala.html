@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRAVELX | Kerala</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f8fa;
+    color:#172026;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#0f172a;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 7%;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#86efac;
+}
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,55,35,.45),
+            rgba(0,30,20,.8)
+        ),
+        linear-gradient(
+            135deg,
+            #86efac,
+            #059669,
+            #064e3b
+        );
+
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero-icon{
+    font-size:90px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin-top:20px;
+
+    font-size:18px;
+    line-height:1.7;
+
+    color:#ecfdf5;
+}
+
+/* CONTENT */
+
+.content{
+    max-width:1000px;
+    margin:auto;
+
+    padding:70px 20px;
+}
+
+.content h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.content p{
+    color:#667780;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* INFO CARDS */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:22px;
+}
+
+.info-card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.13);
+}
+
+.info-card h3{
+    margin-bottom:12px;
+}
+
+.info-card p{
+    margin:0;
+    font-size:14px;
+}
+
+/* HIGHLIGHTS */
+
+.highlights{
+    margin-top:60px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:#ecfdf5;
+}
+
+.highlights h2{
+    margin-bottom:20px;
+}
+
+.highlights ul{
+    list-style:none;
+}
+
+.highlights li{
+    padding:12px 0;
+
+    border-bottom:1px solid #d1fae5;
+
+    color:#4e626a;
+}
+
+.highlights li:last-child{
+    border-bottom:none;
+}
+
+/* BACK */
+
+.back{
+    text-align:center;
+
+    padding-bottom:60px;
+}
+
+.back a{
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:25px;
+
+    background:#059669;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.back a:hover{
+    background:#047857;
+
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+    padding:25px;
+
+    background:#0f172a;
+
+    color:#aebcc2;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .highlights{
+        padding:25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        TRAVELX
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="destinations.html">
+            Destinations
+        </a>
+
+        <a href="packages.html">
+            Packages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">
+            🌴
+        </div>
+
+        <h1>
+            Kerala
+        </h1>
+
+        <p>
+            Explore peaceful backwaters, beautiful
+            beaches, green landscapes and the rich
+            culture of God's Own Country.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTENT -->
+
+<section class="content">
+
+    <h2>
+        About Kerala
+    </h2>
+
+    <p>
+        Kerala is a beautiful state in southern India
+        known for its peaceful backwaters, lush green
+        landscapes, beaches, traditional culture and
+        delicious cuisine. It is a popular destination
+        for nature and cultural tourism.
+    </p>
+
+
+    <!-- INFO CARDS -->
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                🚤 Backwaters
+            </h3>
+
+            <p>
+                Experience peaceful boat rides through
+                Kerala's beautiful network of lakes,
+                canals and waterways.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                🌿 Nature
+            </h3>
+
+            <p>
+                Discover green hills, forests, waterfalls
+                and peaceful natural landscapes.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                🥥 Culture & Food
+            </h3>
+
+            <p>
+                Experience traditional festivals,
+                local traditions and delicious
+                Kerala cuisine.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <div class="highlights">
+
+        <h2>
+            Kerala Highlights
+        </h2>
+
+        <ul>
+
+            <li>🚤 Beautiful backwater experiences</li>
+
+            <li>🌴 Lush green landscapes and nature</li>
+
+            <li>🏖️ Peaceful beaches and coastal views</li>
+
+            <li>🌄 Scenic hill stations</li>
+
+            <li>🥥 Traditional Kerala cuisine</li>
+
+            <li>📸 Amazing photography locations</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+    <a href="destinations.html">
+        ← Back to Destinations
+    </a>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 TRAVELX — Explore • Travel • Discover
+
+</footer>
+
+</body>
+
+</html>
