@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRAVELX | Packages</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f8fa;
+    color:#172026;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#0f172a;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 7%;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#67e8f9;
+}
+
+
+/* HEADER */
+
+.header{
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f766e,
+            #164e63
+        );
+
+    color:white;
+}
+
+.header h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.header p{
+    font-size:18px;
+    color:#dff7f5;
+}
+
+
+/* PACKAGES */
+
+.packages{
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+
+/* CARD */
+
+.package-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.package-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.14);
+}
+
+.package-icon{
+    font-size:55px;
+
+    margin-bottom:15px;
+}
+
+.package-card h2{
+    margin-bottom:12px;
+}
+
+.package-card p{
+    color:#667780;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+
+/* PRICE */
+
+.price{
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin:22px 0;
+
+    color:#0f766e;
+}
+
+.price span{
+    font-size:14px;
+
+    color:#718096;
+
+    font-weight:normal;
+}
+
+
+/* FEATURES */
+
+.package-card ul{
+    list-style:none;
+
+    text-align:left;
+
+    margin:20px 0;
+}
+
+.package-card li{
+    padding:9px 0;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#53656d;
+
+    font-size:14px;
+}
+
+.package-card li:last-child{
+    border-bottom:none;
+}
+
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:12px 25px;
+
+    background:#0f766e;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:25px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#115e59;
+
+    transform:translateY(-3px);
+}
+
+
+/* INFO */
+
+.info{
+    max-width:900px;
+
+    margin:0 auto 70px;
+
+    padding:35px 25px;
+
+    background:#e6f7f5;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.info h2{
+    margin-bottom:12px;
+}
+
+.info p{
+    color:#53656d;
+
+    line-height:1.7;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:25px;
+
+    background:#0f172a;
+
+    color:#aebcc2;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+
+        gap:18px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .header h1{
+        font-size:40px;
+    }
+
+    .packages{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        TRAVELX
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="destinations.html">
+            Destinations
+        </a>
+
+        <a href="packages.html">
+            Packages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="header">
+
+    <h1>
+        Travel Packages
+    </h1>
+
+    <p>
+        Choose a package and start planning
+        your next unforgettable journey.
+    </p>
+
+</section>
+
+
+<!-- PACKAGES -->
+
+<section class="packages">
+
+
+    <!-- PACKAGE 1 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            🏖️
+        </div>
+
+        <h2>
+            Goa Escape
+        </h2>
+
+        <p>
+            Enjoy beaches, sunsets, local food
+            and a relaxing coastal experience.
+        </p>
+
+        <div class="price">
+            ₹8,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 3 Days / 2 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ Beach Visit</li>
+
+            <li>✓ Local Sightseeing</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+
+    <!-- PACKAGE 2 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            🏔️
+        </div>
+
+        <h2>
+            Manali Adventure
+        </h2>
+
+        <p>
+            Explore mountains, valleys, nature
+            and exciting adventure experiences.
+        </p>
+
+        <div class="price">
+            ₹12,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 4 Days / 3 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ Mountain Sightseeing</li>
+
+            <li>✓ Adventure Activities</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+
+    <!-- PACKAGE 3 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            🌴
+        </div>
+
+        <h2>
+            Kerala Experience
+        </h2>
+
+        <p>
+            Discover peaceful backwaters, nature,
+            beaches and traditional culture.
+        </p>
+
+        <div class="price">
+            ₹14,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 5 Days / 4 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ Backwater Experience</li>
+
+            <li>✓ Local Sightseeing</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+
+    <!-- PACKAGE 4 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            🕌
+        </div>
+
+        <h2>
+            Jaipur Heritage
+        </h2>
+
+        <p>
+            Experience royal palaces, historic
+            forts and colourful Rajasthani culture.
+        </p>
+
+        <div class="price">
+            ₹9,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 3 Days / 2 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ Fort Visit</li>
+
+            <li>✓ City Sightseeing</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+
+    <!-- PACKAGE 5 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            ❄️
+        </div>
+
+        <h2>
+            Kashmir Journey
+        </h2>
+
+        <p>
+            Explore beautiful valleys, mountains,
+            lakes and peaceful landscapes.
+        </p>
+
+        <div class="price">
+            ₹16,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 5 Days / 4 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ Valley Sightseeing</li>
+
+            <li>✓ Local Experiences</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+
+    <!-- PACKAGE 6 -->
+
+    <div class="package-card">
+
+        <div class="package-icon">
+            🌆
+        </div>
+
+        <h2>
+            Mumbai Explorer
+        </h2>
+
+        <p>
+            Discover famous landmarks, city life,
+            beaches and the vibrant culture of Mumbai.
+        </p>
+
+        <div class="price">
+            ₹7,999
+            <span>/ person</span>
+        </div>
+
+        <ul>
+
+            <li>✓ 3 Days / 2 Nights</li>
+
+            <li>✓ Hotel Stay</li>
+
+            <li>✓ City Sightseeing</li>
+
+            <li>✓ Landmark Visits</li>
+
+            <li>✓ Breakfast Included</li>
+
+        </ul>
+
+        <a href="contact.html" class="btn">
+            View Package
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section class="info">
+
+    <h2>
+        Plan Your Journey With TRAVELX
+    </h2>
+
+    <p>
+        Our travel packages are designed to give
+        you a simple way to explore popular
+        destinations and discover memorable
+        travel experiences.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 TRAVELX — Explore • Travel • Discover
+
+</footer>
+
+
+</body>
+
+</html>
