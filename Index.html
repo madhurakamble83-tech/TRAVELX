@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRAVELX | Explore & Travel</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f8fa;
+    color:#172026;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 7%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:4px;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#22c7a9;
+}
+
+/* HERO */
+
+.hero{
+    min-height:680px;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,25,35,.85),
+            rgba(3,25,35,.35)
+        ),
+        linear-gradient(
+            135deg,
+            #0e7490,
+            #14b8a6,
+            #0f172a
+        );
+}
+
+.hero-content{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+
+    color:white;
+}
+
+.hero-content small{
+    color:#5eead4;
+    letter-spacing:4px;
+    font-weight:bold;
+}
+
+.hero-content h1{
+    max-width:700px;
+
+    font-size:65px;
+    line-height:1.05;
+
+    margin-top:18px;
+}
+
+.hero-content h1 span{
+    color:#5eead4;
+}
+
+.hero-content p{
+    max-width:600px;
+
+    margin-top:22px;
+
+    color:#dcebed;
+
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* SEARCH BOX */
+
+.search-box{
+
+    max-width:850px;
+
+    margin-top:35px;
+
+    padding:12px;
+
+    display:flex;
+    gap:10px;
+
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.2);
+}
+
+.search-item{
+    flex:1;
+    padding:12px 15px;
+
+    border-right:1px solid #ddd;
+}
+
+.search-item:last-child{
+    border:none;
+}
+
+.search-item small{
+    display:block;
+
+    color:#777;
+
+    letter-spacing:0;
+
+    font-size:11px;
+}
+
+.search-item strong{
+    display:block;
+
+    margin-top:5px;
+
+    color:#172026;
+}
+
+.search-btn{
+    padding:15px 25px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#14b8a6;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.search-btn:hover{
+    background:#0f9485;
+    transform:translateY(-2px);
+}
+
+/* SECTION */
+
+.section{
+    padding:75px 7%;
+
+    text-align:center;
+}
+
+.section h2{
+    font-size:38px;
+}
+
+.section > p{
+    margin-top:12px;
+
+    color:#667780;
+}
+
+/* DESTINATION CARDS */
+
+.cards{
+
+    max-width:1100px;
+
+    margin:45px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:left;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.15);
+}
+
+.card-image{
+
+    height:210px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #99f6e4,
+            #0f766e
+        );
+}
+
+.card:nth-child(2) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #bfdbfe,
+            #2563eb
+        );
+}
+
+.card:nth-child(3) .card-image{
+    background:
+        linear-gradient(
+            135deg,
+            #fed7aa,
+            #ea580c
+        );
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    font-size:22px;
+}
+
+.card-content p{
+    margin-top:10px;
+
+    color:#687880;
+
+    line-height:1.6;
+}
+
+.card-link{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    color:#0f9f8f;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+/* FEATURES */
+
+.features{
+
+    background:#eaf7f5;
+
+    padding:70px 7%;
+
+    text-align:center;
+}
+
+.feature-grid{
+
+    max-width:1000px;
+
+    margin:40px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.feature{
+
+    padding:30px 20px;
+
+    background:white;
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-7px);
+}
+
+.feature-icon{
+    font-size:40px;
+}
+
+.feature h3{
+    margin-top:15px;
+}
+
+.feature p{
+    margin-top:10px;
+
+    color:#718087;
+
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+
+    padding:25px;
+
+    background:#0f172a;
+
+    color:#aebcc2;
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        min-height:750px;
+        padding-top:120px;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-item{
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    .cards,
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        TRAVELX
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="destinations.html">
+            Destinations
+        </a>
+
+        <a href="packages.html">
+            Packages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>
+            EXPLORE • TRAVEL • EXPERIENCE
+        </small>
+
+        <h1>
+            Discover Your
+            <span>Next Adventure</span>
+        </h1>
+
+        <p>
+            Explore amazing destinations, discover
+            beautiful places and plan unforgettable
+            journeys across India.
+        </p>
+
+
+        <!-- SEARCH STYLE BOX -->
+
+        <div class="search-box">
+
+            <div class="search-item">
+
+                <small>
+                    DESTINATION
+                </small>
+
+                <strong>
+                    🌍 Where to?
+                </strong>
+
+            </div>
+
+
+            <div class="search-item">
+
+                <small>
+                    TRAVEL TYPE
+                </small>
+
+                <strong>
+                    🧳 Adventure
+                </strong>
+
+            </div>
+
+
+            <div class="search-item">
+
+                <small>
+                    TRIP
+                </small>
+
+                <strong>
+                    📅 Plan your trip
+                </strong>
+
+            </div>
+
+
+            <button class="search-btn">
+                Explore
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POPULAR DESTINATIONS -->
+
+<section class="section">
+
+    <h2>
+        Popular Destinations
+    </h2>
+
+    <p>
+        Places that should be on your travel list.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="card-image">
+                🏖️
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Goa
+                </h3>
+
+                <p>
+                    Relax on beautiful beaches and
+                    experience the vibrant coastal life.
+                </p>
+
+                <a
+                    href="goa.html"
+                    class="card-link"
+                >
+                    Explore Goa →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                🏔️
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Manali
+                </h3>
+
+                <p>
+                    Experience mountains, valleys,
+                    snow and peaceful Himalayan views.
+                </p>
+
+                <a
+                    href="manali.html"
+                    class="card-link"
+                >
+                    Explore Manali →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                🏰
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Jaipur
+                </h3>
+
+                <p>
+                    Discover royal palaces, forts and
+                    the colourful heritage of Rajasthan.
+                </p>
+
+                <a
+                    href="jaipur.html"
+                    class="card-link"
+                >
+                    Explore Jaipur →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- WHY TRAVELX -->
+
+<section class="features">
+
+    <h2>
+        Why Travel With TRAVELX?
+    </h2>
+
+    <p>
+        Everything you need for an unforgettable journey.
+    </p>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🗺️
+            </div>
+
+            <h3>
+                Amazing Destinations
+            </h3>
+
+            <p>
+                Discover beautiful destinations
+                across India.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💎
+            </div>
+
+            <h3>
+                Unique Experiences
+            </h3>
+
+            <p>
+                Explore culture, nature,
+                adventure and heritage.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Unforgettable Memories
+            </h3>
+
+            <p>
+                Turn every journey into
+                a memorable experience.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 TRAVELX — Explore • Travel • Discover
+
+</footer>
+
+
+</body>
+</html>
